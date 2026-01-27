@@ -18,34 +18,22 @@ export const environment = {
     },
     telegramChannels: [
         {
-            name: '💰 Money Making Secrets',
-            url: 'https://t.me/moneymakerinsider',
-            description: 'Daily tips on monetization & passive income',
-            members: '125K+'
+            name: '🎬 SecFlix India',
+            url: 'https://t.me/secflixIndia',
+            description: 'Exclusive Indian content and entertainment secrets.',
+            members: 'Premium'
         },
         {
-            name: '🎯 Traffic Arbitrage Pro',
-            url: 'https://t.me/trafficarbitragepro',
-            description: 'Learn traffic arbitrage & CPA marketing',
-            members: '89K+'
+            name: '💸 Dirty Marketing Money',
+            url: 'https://t.me/DirtyMarketingMoney',
+            description: 'Master the dark art of digital marketing and monetization.',
+            members: 'Official'
         },
         {
-            name: '📈 Affiliate Marketing Elite',
-            url: 'https://t.me/affiliateelite',
-            description: 'Premium affiliate strategies & offers',
-            members: '210K+'
-        },
-        {
-            name: '🔥 Adult Niche Profits',
-            url: 'https://t.me/adultnicheprofit',
-            description: 'Exclusive adult marketing methods',
-            members: '156K+'
-        },
-        {
-            name: '💎 Digital Hustle Hub',
-            url: 'https://t.me/digitalhustlehub',
-            description: 'All-in-one digital marketing community',
-            members: '340K+'
+            name: '🎥 Uploads Flix',
+            url: 'https://t.me/uploadsflix',
+            description: 'Daily high-quality uploads and marketing insights.',
+            members: 'Elite'
         }
     ]
 };
