@@ -1,0 +1,199 @@
+/* Google Fonts Import - MUST be at top */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ============================================
+   DIRTY MARKETING BLOG - GLOBAL STYLES
+   Simple & Exciting Light Theme Redesign
+   ============================================ */
+
+/* CSS Custom Properties */
+:root {
+    /* Colors - SIMPLE LIGHT THEME */
+    --bg-primary: #fdfcf8;
+    /* Soft Cream */
+    --bg-secondary: #ffffff;
+    /* Pure White */
+    --bg-tertiary: #f5f3ef;
+    /* Slightly darker cream */
+
+    --text-primary: #2d3436;
+    /* Deep Charcoal */
+    --text-secondary: #636e72;
+    /* Dark Grey */
+    --text-muted: #b2bec3;
+    /* Muted Blue-Grey */
+
+    --accent-primary: #ff6b6b;
+    /* Warm Coral - Excitement */
+    --accent-secondary: #4834d4;
+    /* Royal Blue - Professional */
+    --accent-tertiary: #f0932b;
+    /* Sunny Orange */
+
+    --card-bg: #ffffff;
+    --border-color: #e3e0d9;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px var(--shadow-color);
+    --shadow-md: 0 4px 12px var(--shadow-color);
+    --shadow-lg: 0 8px 24px var(--shadow-color);
+    --shadow-glow: 0 0 15px rgba(255, 107, 107, 0.2);
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Outfit', var(--font-primary);
+
+    /* Spacing */
+    --container-max: 1100px;
+    --container-padding: 1.5rem;
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+a:hover {
+    color: var(--accent-primary);
+}
+
+/* Utilities */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #dcdde1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #718093;
+}
+
+/* Selection */
+::selection {
+    background: rgba(255, 107, 107, 0.2);
+    color: var(--text-primary);
+}
+
+/* Glass Card - Simplified for Light Theme */
+.glass-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.glass-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #ff4757;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.btn-secondary {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background: #eeeeee;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1.25rem;
+    }
+}

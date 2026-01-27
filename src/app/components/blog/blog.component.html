@@ -1,0 +1,187 @@
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="badge">
+            <span class="badge-icon">🔥</span>
+            <span>Exclusive Insider Report</span>
+        </div>
+        <h1 class="hero-title">
+            <span class="gradient-text">{{ blog.title }}</span>
+        </h1>
+        <p class="hero-subtitle">{{ blog.subtitle }}</p>
+        <div class="hero-meta">
+            <span class="meta-item">
+                <span class="meta-icon">✍️</span>
+                {{ blog.author }}
+            </span>
+            <span class="meta-divider">•</span>
+            <span class="meta-item">
+                <span class="meta-icon">📅</span>
+                {{ blog.publishDate }}
+            </span>
+            <span class="meta-divider">•</span>
+            <span class="meta-item">
+                <span class="meta-icon">⏱️</span>
+                12 min read
+            </span>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to explore</span>
+    </div>
+</header>
+
+<!-- Top Ad -->
+<app-google-ad [adSlot]="adSlots.top" adClass="ad-top" format="horizontal">
+</app-google-ad>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <h2 class="section-title">
+            <span class="title-icon">💸</span>
+            The Numbers Don't Lie
+        </h2>
+        <div class="stats-grid">
+            <div class="stat-card" *ngFor="let stat of revenueStats">
+                <span class="stat-icon">{{ stat.icon }}</span>
+                <span class="stat-value">{{ stat.value }}</span>
+                <span class="stat-label">{{ stat.label }}</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Telegram Channels Section - HIGHLIGHTED -->
+<section class="telegram-section">
+    <div class="container">
+        <div class="telegram-header">
+            <div class="telegram-badge">
+                <span class="tg-icon">✈️</span>
+                <span>Join Our Communities</span>
+            </div>
+            <h2 class="telegram-title">
+                <span class="gradient-text">Premium Telegram Channels</span>
+            </h2>
+            <p class="telegram-subtitle">
+                Get exclusive insights, real-time strategies, and connect with like-minded marketers.
+                These channels provide premium content and generate revenue through valuable services.
+            </p>
+        </div>
+        <div class="telegram-grid">
+            <a *ngFor="let channel of telegramChannels" [href]="channel.url" target="_blank" rel="noopener noreferrer"
+                class="telegram-card">
+                <div class="telegram-card-header">
+                    <span class="channel-name">{{ channel.name }}</span>
+                    <span class="member-count">{{ channel.members }} members</span>
+                </div>
+                <p class="channel-description">{{ channel.description }}</p>
+                <div class="join-btn">
+                    <span>Join Channel</span>
+                    <span class="arrow">→</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="blog-content">
+    <div class="container">
+        <article class="article">
+            <ng-container *ngFor="let section of sections; let i = index">
+                <!-- Middle Ad after intro -->
+                <app-google-ad *ngIf="i === 2" [adSlot]="adSlots.middle" adClass="ad-middle" format="rectangle">
+                </app-google-ad>
+
+                <section class="content-section" [id]="section.id">
+                    <div class="section-header">
+                        <span class="section-icon">{{ section.icon }}</span>
+                        <h2 class="section-heading">{{ section.title }}</h2>
+                    </div>
+                    <p class="section-content">{{ section.content }}</p>
+                </section>
+
+                <!-- Rectangle Ad after traffic section -->
+                <app-google-ad *ngIf="i === 4" [adSlot]="adSlots.rectangle" adClass="ad-rectangle" format="rectangle">
+                </app-google-ad>
+            </ng-container>
+        </article>
+
+        <!-- Sidebar with sticky ad -->
+        <aside class="sidebar">
+            <div class="sidebar-sticky">
+                <div class="sidebar-card">
+                    <h3 class="sidebar-title">
+                        <span class="title-icon">⚠️</span>
+                        Disclaimer
+                    </h3>
+                    <p class="sidebar-text">
+                        This article is for educational purposes only. The practices described may violate laws,
+                        platform policies, and ethical standards. We do not endorse or encourage any illegal activities.
+                    </p>
+                </div>
+                <app-google-ad [adSlot]="adSlots.rectangle" adClass="ad-rectangle" format="vertical">
+                </app-google-ad>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-content">
+                <h2 class="cta-title">Want to Learn More?</h2>
+                <p class="cta-text">
+                    Subscribe to our newsletter for more insider insights on digital marketing, monetization strategies,
+                    and industry trends.
+                </p>
+                <form class="cta-form">
+                    <input type="email" placeholder="Enter your email" class="cta-input">
+                    <button type="submit" class="cta-button">
+                        Subscribe
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+            </div>
+            <div class="cta-graphic">
+                <div class="floating-icons">
+                    <span class="float-icon" style="--delay: 0s">💰</span>
+                    <span class="float-icon" style="--delay: 0.5s">📈</span>
+                    <span class="float-icon" style="--delay: 1s">🎯</span>
+                    <span class="float-icon" style="--delay: 1.5s">💎</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bottom Ad -->
+<app-google-ad [adSlot]="adSlots.bottom" adClass="ad-bottom" format="horizontal">
+</app-google-ad>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">💸 DirtyMarketing</span>
+                <p class="footer-tagline">Exposing the dark side of digital marketing</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Marketing Insider. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
