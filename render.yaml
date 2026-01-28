@@ -5,6 +5,10 @@ services:
     buildCommand: npm run build
     publishPath: dist/frontend/browser
     routes:
+      # Redirect www to non-www to avoid duplicate content
+      - type: redirect
+        source: /www
+        destination: /
       # Support Angular routing and deep links
       - type: rewrite
         source: /*
