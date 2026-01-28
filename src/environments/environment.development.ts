@@ -2,7 +2,7 @@ export const environment = {
     production: false,
     apiUrl: 'http://localhost:3000',
     frontendUrl: 'http://localhost:4200',
-    adSenseId: 'ca-pub-XXXXXXXXXXXXXXXX',
+    adSenseId: 'ca-pub-4448362911093439',
     adSlots: {
         top: '0000000001',
         middle: '0000000002',
@@ -20,20 +20,20 @@ export const environment = {
         {
             name: '🎬 SecFlix India',
             url: 'https://t.me/secflixIndia',
-            description: 'Exclusive Indian content and entertainment secrets.',
-            members: 'Premium'
+            description: 'Exposing the hidden mechanics of Indian content distribution and underground monetization loops.',
+            members: 'Premium Truth'
         },
         {
             name: '💸 Dirty Marketing Money',
             url: 'https://t.me/DirtyMarketingMoney',
-            description: 'Master the dark art of digital marketing and monetization.',
-            members: 'Official'
+            description: 'Unfiltered access to the dark art of digital marketing. We reveal how millions are actually moved behind the scenes.',
+            members: 'Official Leak'
         },
         {
             name: '🎥 Uploads Flix',
             url: 'https://t.me/uploadsflix',
-            description: 'Daily high-quality uploads and marketing insights.',
-            members: 'Elite'
+            description: 'Real-world data and raw uploads. No fluff—just the proven strategies that the mainstream world won\'t show you.',
+            members: 'Elite Intel'
         }
     ]
 };
